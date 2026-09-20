@@ -1,0 +1,9 @@
+---
+layout: default
+---
+<article class="container research-detail">
+  <header class="page-heading"><a class="back-link" href="{{ '/research/' | relative_url }}">← Research</a><p class="eyebrow">0{{ page.order }} / {{ page.kicker }}</p><h1>{{ page.title | escape }}</h1><p class="lede">{{ page.summary }}</p></header>
+  {% include figure.html item=page %}
+  <div class="prose research-narrative">{{ content }}</div>
+  <nav class="research-next" aria-label="More research"><p class="eyebrow">Explore the research</p>{% assign research_items = site.research | sort: 'order' %}{% for item in research_items %}{% unless item.url == page.url %}<a href="{{ item.url | relative_url }}">{{ item.title | escape }} <span aria-hidden="true">→</span></a>{% endunless %}{% endfor %}</nav>
+</article>

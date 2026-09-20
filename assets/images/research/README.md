@@ -1,6 +1,6 @@
-# Research figure plan
+# Research figure sources and web exports
 
-The structural homepage deliberately records figure sources without copying or converting them yet. The final design pass should export author-controlled originals into web-ready SVG, WebP, or PNG assets with consistent cropping and aspect ratios.
+The first visual version uses all five author-controlled primary selections below. Source documents and proposal text are not included in this repository. This README is excluded from the generated site.
 
 ## Primary selections
 
@@ -23,3 +23,19 @@ The structural homepage deliberately records figure sources without copying or c
 ## Asset rule
 
 Prefer original author-controlled artwork or regenerated plots over publisher-typeset composite figures. Keep the scientific content unchanged while adapting crop, resolution, and typography for the web.
+
+
+## Incorporated assets
+
+| Web asset | Export |
+| --- | --- |
+| `ferroelectric-mems.webp` | Original 976 × 380 PNG converted to WebP, quality 92. |
+| `flexoelectric-mems.svg` | Inkscape plain SVG, drawing-sized viewBox; editor metadata removed. |
+| `scientific-ml.webp` | Original 569 × 517 PNG converted to WebP, quality 92; no upscaling. |
+| `multiscale-mechanics.webp` | PDF rendered with Poppler at 1600 px maximum dimension; exterior white margin trimmed, all legends retained; WebP quality 92. |
+| `topological-phononics.svg` | Inkscape plain SVG, drawing-sized viewBox; editor metadata removed. |
+
+SVGs are self-contained (embedded image data, no external references). The
+phononics source includes raster panels, whose original resolution is preserved.
+No scientific panel was removed or recoloured. Layout uses object containment,
+not image cropping. Alt text and captions live alongside research narratives.

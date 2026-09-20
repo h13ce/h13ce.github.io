@@ -1,0 +1,5 @@
+# Add verified records only. The homepage shows up to six selected entries.
+# Required: title, authors, venue, year. Optional: doi (full URL), preprint,
+# code, research (theme URL), selected (true/false).
+# This empty list intentionally renders a single Google Scholar link.
+[]

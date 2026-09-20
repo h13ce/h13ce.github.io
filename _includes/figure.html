@@ -1,0 +1,6 @@
+<figure class="research-figure">
+  <a class="figure-link" href="{{ include.item.figure.path | relative_url }}" aria-label="View full figure: {{ include.item.figure.alt | escape }}">
+    <img src="{{ include.item.figure.path | relative_url }}" alt="{{ include.item.figure.alt | escape }}" width="{{ include.item.figure.width }}" height="{{ include.item.figure.height }}" loading="lazy" decoding="async">
+  </a>
+  <figcaption>{{ include.item.figure.caption }} <a href="{{ include.item.figure.path | relative_url }}">View full figure <span aria-hidden="true">↗</span></a></figcaption>
+</figure>
