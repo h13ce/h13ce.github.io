@@ -4,7 +4,7 @@ title: "Research"
 permalink: /research/
 ---
 
-My research spans computational mechanics, functional materials, scientific machine learning, MEMS, and multiscale modelling. The homepage is organized around five research directions.
+My research developed from computational mechanics and higher-order multiphysics modelling toward experimental MEMS, scientific machine learning, differentiable simulation, and multiscale mechanics. The five directions below are presented as connected research streams rather than isolated topics.
 
 {% assign research_items = site.research | sort: "order" %}
 {% for item in research_items %}
@@ -12,11 +12,11 @@ My research spans computational mechanics, functional materials, scientific mach
 
 {{ item.summary }}
 
-{% if item.figure_placeholder %}
-*Figure placeholder: {{ item.figure_placeholder }}*
+{% if item.figure %}
+*Figure placeholder — selected source: `{{ item.figure.source_repository }}/{{ item.figure.source_path }}`*
 {% endif %}
 {% endfor %}
 
-## Foundations
+## Computational foundations
 
-Earlier and continuing methodological work includes finite and boundary element methods, isogeometric analysis, nonlinear and multiphysics mechanics, and inverse problems.
+The research programme is supported by earlier and continuing work in finite and boundary element methods, isogeometric analysis, nonlinear and multiphysics mechanics, fracture, inverse problems, and parameter identification. These methods remain part of the computational foundation rather than separate top-level homepage themes.
