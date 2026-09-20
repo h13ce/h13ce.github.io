@@ -1,0 +1,174 @@
+# ============================================================
+# Binh Huy Nguyen — Academic Homepage
+# Structural configuration (v0)
+# ============================================================
+
+title: "Binh Huy Nguyen"
+description: >-
+  Tenure-track Assistant Professor at CEMEF, Mines Paris–PSL,
+  working at the interface of computational mechanics,
+  functional materials, scientific machine learning, and MEMS.
+
+url: "https://h13ce.github.io"
+baseurl: ""
+
+author:
+  name: "Binh Huy Nguyen"
+  position: "Tenure-track Assistant Professor"
+  affiliation: "CEMEF, Mines Paris–PSL"
+  email: "binh-huy.nguyen@minesparis.psl.eu"
+
+# ------------------------------------------------------------
+# Site appearance
+# ------------------------------------------------------------
+
+theme: minima
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+permalink: pretty
+
+# Minima-compatible navigation for the structural version.
+# Astra/custom layouts may later consume the navigation block below.
+header_pages:
+  - research.md
+  - publications.md
+  - software.md
+  - cv.md
+
+navigation:
+  - title: "Research"
+    url: "/research/"
+  - title: "Publications"
+    url: "/publications/"
+  - title: "Software"
+    url: "/software/"
+  - title: "CV"
+    url: "/cv/"
+
+# ------------------------------------------------------------
+# Homepage
+# ------------------------------------------------------------
+
+homepage:
+  tagline: >-
+    Computational mechanics · Functional materials ·
+    Scientific machine learning · MEMS
+
+  introduction: >-
+    I develop computational and experimental approaches for nonlinear
+    multiphysics systems, connecting material modelling, device-scale
+    characterization, differentiable simulation, and multiscale mechanics.
+
+  featured_research_count: 5
+  featured_publications_count: 6
+  show_software: true
+  show_career: true
+
+# ------------------------------------------------------------
+# Research
+# ------------------------------------------------------------
+
+research:
+  themes:
+    - id: "ferroelectric-mems"
+      title: "Ferroelectric MEMS"
+    - id: "flexoelectric-mems"
+      title: "Flexoelectric MEMS & Microfabrication"
+    - id: "scientific-ml"
+      title: "Scientific Machine Learning & Differentiable Mechanics"
+    - id: "multiscale-mechanics"
+      title: "Multiscale Computational Mechanics"
+    - id: "topological-phononics"
+      title: "Nonlinear & Topological Phononics"
+
+  foundations:
+    - "Finite element and boundary element methods"
+    - "Isogeometric analysis"
+    - "Nonlinear and multiphysics mechanics"
+    - "Inverse problems and parameter identification"
+
+# ------------------------------------------------------------
+# Publications
+# ------------------------------------------------------------
+
+publications:
+  bib_file: "/assets/publications.bib"
+  featured_count: 6
+
+  categories:
+    - "Functional Materials & MEMS"
+    - "Computational Mechanics"
+    - "Scientific Machine Learning"
+    - "Multiscale Mechanics"
+    - "Topological Mechanics"
+
+# ------------------------------------------------------------
+# Software
+# ------------------------------------------------------------
+
+software:
+  enabled: true
+
+  projects:
+    - title: "DiffFEM"
+      description: >-
+        JAX-based differentiable finite-element framework for
+        forward, inverse, and multiphysics simulation.
+      url: "https://github.com/h13ce/difffem"
+      status: "Public release in preparation"
+
+# ------------------------------------------------------------
+# Academic profiles
+# ------------------------------------------------------------
+
+profiles:
+  google_scholar: "https://scholar.google.com/citations?user=zMf1WedEf5gC&hl=en"
+  orcid: "https://orcid.org/0000-0003-0830-3121"
+  github: "https://github.com/h13ce"
+
+# ------------------------------------------------------------
+# CV
+# ------------------------------------------------------------
+
+cv:
+  file: ""
+  label: "Download CV"
+
+# ------------------------------------------------------------
+# Images
+# ------------------------------------------------------------
+
+images:
+  profile: ""
+  hero: ""
+  favicon: ""
+
+# ------------------------------------------------------------
+# Structured research content
+# ------------------------------------------------------------
+
+collections:
+  research:
+    output: true
+    permalink: /research/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "research"
+    values:
+      layout: "page"
+
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .github
