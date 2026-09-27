@@ -12,6 +12,9 @@ figure:
   width: 1959
   height: 870
 kicker: Fabrication & characterization
+selected_works:
+  - flexo-sin
+  - electro-gradient-semiconductor
 ---
 Flexoelectricity couples electric polarization to strain gradients and therefore introduces higher-order kinematics into electromechanical modelling. I developed isogeometric formulations that provide the spatial continuity required by these models and extended them to coupled problems involving interfaces, free charge, and semiconducting materials.
 

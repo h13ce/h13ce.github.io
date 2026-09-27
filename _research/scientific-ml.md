@@ -13,6 +13,11 @@ figure:
   width: 569
   height: 517
 kicker: Learning & differentiable simulation
+selected_works:
+  - ferro-difffem
+  - pinn-microbender
+  - ferro-fno
+  - fno-homogenization
 ---
 My scientific-machine-learning work is built around mechanics problems in which physical structure, sparse measurements, and history dependence matter. I have used physics-informed neural networks for forward and inverse modelling of piezoelectric microsystems, including identification of electromechanical parameters from experimental observations. I have also developed Fourier neural-operator models for history-dependent hysteresis in ferroelectric and ferromagnetic materials, treating the response as an operator between excitation and material-response histories.
 

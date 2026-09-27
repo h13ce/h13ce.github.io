@@ -12,6 +12,11 @@ figure:
   width: 976
   height: 380
 kicker: Modelling & experiment
+selected_works:
+  - ferro-difffem
+  - ferro-microactuator
+  - afe-actuator
+  - ferro-fno
 ---
 My work on ferroelectric MEMS connects nonlinear material modelling with device-scale simulation and experiment. I have developed phenomenological continuum formulations for ferroelectric, antiferroelectric, and antiferroelectric-like materials, and reduced actuator models that can be calibrated against measured electromechanical response. Laser Doppler vibrometry has been used to characterize electrically driven microstructures and to connect constitutive behaviour with observable device dynamics.
 

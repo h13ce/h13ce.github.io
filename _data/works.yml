@@ -1,0 +1,194 @@
+ferro-difffem:
+  title: "Differentiable finite elements for history-dependent ferroelectricity: matrix-free forward analysis and adjoint inverse identification"
+  year: 2026
+  status: "Preprint and submitted manuscript"
+  publication_id: "ferro-difffem"
+  themes:
+    - "ferroelectric-mems"
+    - "scientific-ml"
+  summary: >-
+    A differentiable finite-element framework for nonlinear ferroelectric MEMS
+    that keeps the local switching problem, global electromechanical equilibrium,
+    and loading history inside one forward/inverse model. The formulation combines
+    implicit differentiation, matrix-free nonlinear solution, and a fully discrete
+    adjoint for trajectory-based parameter identification.
+  source_figure:
+    repository: "h13ce/ERCStg"
+    path: "Figures/difffem_mirror.pdf"
+
+ferro-microactuator:
+  title: "Simplified phenomenological model for ferroelectric micro-actuator"
+  year: 2023
+  status: "Micromachines 14, 1355"
+  publication_id: "ferro-microactuator"
+  themes:
+    - "ferroelectric-mems"
+  summary: >-
+    A thermodynamically based phenomenological model connects ferroelectric
+    switching to coupled finite-element actuator simulation and device-scale
+    characterization. The associated micro-cantilever work links the material
+    description to LDV measurements and ferroelectric thin-film characterization.
+  source_figure:
+    repository: "h13ce/ERCStg"
+    path: "Figures/Microcantilever-LDV-measurement.png"
+  media:
+    - label: "Minor-loop ferroelectric actuator simulation"
+      kind: "gif"
+      path: "/assets/media/FerroActuator/Minor_bipolar_butterfly.gif"
+      web_ready: true
+      role: "computational animation"
+    - label: "Polytec LDV measurement"
+      kind: "video"
+      path: "/assets/media/FerroActuator/PolytecMeasurement.mp4"
+      mime: "video/mp4"
+      web_ready: true
+      role: "experimental measurement"
+
+afe-actuator:
+  title: "Computational modeling of uniaxial antiferroelectric and antiferroelectric-like actuators"
+  year: 2024
+  status: "International Journal of Numerical Modelling 37, e3273"
+  publication_id: "afe-actuator"
+  themes:
+    - "ferroelectric-mems"
+  summary: >-
+    The ferroelectric modelling line is extended to antiferroelectric and
+    antiferroelectric-like switching, translating pinched and double P-E
+    hysteresis into a practical constitutive update and coupled actuator model.
+  source_figure:
+    repository: "h13ce/ERCStg"
+    path: "Figures/AFE-AFE-like.png"
+
+ferro-fno:
+  title: "Fourier neural operator-based modeling of ferroelectric device under large signal and high frequency"
+  year: 2026
+  status: "Public preprint"
+  publication_id: "ferro-fno"
+  themes:
+    - "ferroelectric-mems"
+    - "scientific-ml"
+  summary: >-
+    Experimentally measured voltage-displacement trajectories across amplitudes
+    and frequencies are used to train a Fourier neural operator for nonlinear
+    ferroelectric micro-actuation, extending operator learning toward
+    large-signal excitation, high frequency, and structural resonance.
+  source_figure:
+    repository: "h13ce/ERCStg"
+    path: "Figures/Butterflies_Exp_FNO.png"
+
+flexo-sin:
+  title: "Observation of flexoelectric effect in PECVD silicon nitride"
+  year: 2025
+  status: "Applied Physics Letters 126"
+  publication_id: "flexo-sin"
+  themes:
+    - "flexoelectric-mems"
+  summary: >-
+    A complete fabrication-experiment-computation chain for extracting a weak
+    flexoelectric response from PECVD silicon nitride, combining device
+    microfabrication, controlled bending, lock-in charge measurement, and
+    finite-element interpretation.
+  source_figure:
+    repository: "h13ce/ERCStg"
+    path: "Figures/Flexo_works.png"
+
+electro-gradient-semiconductor:
+  title: "NURBS-based formulation for nonlinear electro-gradient elasticity in semiconductors"
+  year: 2019
+  status: "Computer Methods in Applied Mechanics and Engineering 346, 1074-1095"
+  publication_id: "electro-gradient-semiconductor"
+  themes:
+    - "flexoelectric-mems"
+  summary: >-
+    A higher-order isogeometric formulation couples flexoelectricity,
+    electro-gradient elasticity, and free-charge transport in semiconducting
+    materials. This work forms part of the numerical-method foundation for
+    later multiphysics and experimental MEMS studies.
+  source_figure:
+    repository: "h13ce/ERCStg"
+    path: "Figures/Flexo_semiconductor.png"
+
+pinn-microbender:
+  title: "Physics-informed neural networks with data-driven in modeling and characterizing piezoelectric micro-bender"
+  year: 2024
+  status: "Journal of Micromechanics and Microengineering 34, 115004"
+  publication_id: "pinn-microbender"
+  themes:
+    - "scientific-ml"
+  summary: >-
+    Physics-informed neural networks are combined with a reduced
+    electromechanical micro-bender model for forward prediction and inverse
+    characterization, using measured displacement data to identify device and
+    material parameters.
+  source_figure:
+    repository: "h13ce/ERCStg"
+    path: "Figures/PINNs_Piezo.png"
+
+fno-homogenization:
+  title: "Universal Fourier Neural Operators for periodic homogenization problems in linear elasticity"
+  year: 2026
+  status: "Journal of the Mechanics and Physics of Solids 206, 106418"
+  publication_id: "fno-homogenization"
+  themes:
+    - "scientific-ml"
+    - "multiscale-mechanics"
+  summary: >-
+    Fourier neural operators are connected directly to FFT-based computational
+    homogenization, showing how an FNO can reproduce the basic FFT scheme and
+    approximate periodic cell problems while retaining a clear computational-
+    mechanics interpretation.
+  source_figure:
+    repository: "h13ce/ERCStg"
+    path: "Figures/FNO_FFT_fiber.png"
+
+stochastic-symmetry:
+  title: "Symmetries in stochastic homogenization and adjustments for the RVE method"
+  year: 2026
+  status: "International Journal of Solids and Structures 325, 113728"
+  publication_id: "stochastic-symmetry"
+  themes:
+    - "multiscale-mechanics"
+  summary: >-
+    Statistical symmetries of random microstructures are used to constrain
+    effective response and fluctuations, with orthogonal symmetry projection
+    providing a principled variance-reduction mechanism for RVE calculations.
+  source_figure:
+    repository: "h13ce/ERCStg"
+    path: "Figures/Isotropic_RVEs.png"
+
+tunable-topological:
+  title: "Tunable topological bandgaps and frequencies in a pre-stressed soft phononic crystal"
+  year: 2019
+  status: "Journal of Applied Physics 125, 095106"
+  publication_id: "tunable-topological"
+  themes:
+    - "topological-phononics"
+  summary: >-
+    Large deformation of soft phononic unit cells is used as a physical control
+    variable: geometry and inversion-symmetry breaking evolve with deformation,
+    changing the topological phase and the resulting wave propagation.
+  source_figure:
+    repository: "h13ce/ERCStg"
+    path: "Figures/Hex_Annular_30x30_WP_defect_t97.pdf"
+  media:
+    - label: "Topological wave-propagation simulation"
+      kind: "source-video"
+      path: "/assets/media/TI/Structure_Hex_Annular_30x30_3models_2.avi"
+      web_ready: false
+      target_format: "mp4/webm"
+      role: "computational animation"
+
+bistable-topological:
+  title: "Topologically switchable behavior induced by an elastic instability in a phononic waveguide"
+  year: 2020
+  status: "Journal of Applied Physics 127, 245109"
+  publication_id: "bistable-topological"
+  themes:
+    - "topological-phononics"
+  summary: >-
+    An elastically bistable unit cell provides two mechanically stable
+    configurations with different topological states, linking local structural
+    switching to collective wave-guiding behaviour.
+  source_figure:
+    repository: "h13ce/ERCStg"
+    path: "CV/cv_TI_bistable.svg"

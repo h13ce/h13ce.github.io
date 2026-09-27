@@ -1,0 +1,41 @@
+{% assign work_count = include.count | default: 9999 %}
+{% assign work_mode = include.mode | default: 'detail' %}
+{% if include.ids and include.ids.size > 0 %}
+<div class="selected-works selected-works--{{ work_mode }}">
+  {% if work_mode == 'detail' %}<h2>Selected work</h2>{% else %}<p class="selected-works-label">Selected work</p>{% endif %}
+  <ol class="selected-works-list">
+  {% for work_id in include.ids limit: work_count %}
+    {% assign work = site.data.works[work_id] %}
+    {% if work %}
+      {% assign matching_papers = site.data.publications | where: 'id', work.publication_id %}
+      {% assign paper = matching_papers | first %}
+      <li id="{% if work_mode == 'detail' %}work-{{ work_id }}{% else %}theme-work-{{ work_id }}{% endif %}">
+        <article class="selected-work">
+          <p class="selected-work-meta">{{ work.year }} · {{ work.status | escape }}</p>
+          {% if work_mode == 'compact' and include.research_url %}
+            <h4><a href="{{ include.research_url | relative_url }}#work-{{ work_id }}">{{ work.title | escape }}</a></h4>
+          {% else %}
+            <h3>{{ work.title | escape }}</h3>
+          {% endif %}
+          {% if work_mode == 'detail' %}
+            <p>{{ work.summary }}</p>
+            <div class="selected-work-links">
+              {% if paper.doi %}<a href="{{ paper.doi | escape }}">DOI ↗</a>{% endif %}
+              {% if paper.preprint %}<a href="{{ paper.preprint | escape }}">Preprint ↗</a>{% endif %}
+              {% if paper.code %}<a href="{{ paper.code | escape }}">Code ↗</a>{% endif %}
+              {% if work.media %}
+                {% for media in work.media %}
+                  {% if media.web_ready %}
+                    <a href="{{ media.path | relative_url }}">{{ media.label | escape }} ↗</a>
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+            </div>
+          {% endif %}
+        </article>
+      </li>
+    {% endif %}
+  {% endfor %}
+  </ol>
+</div>
+{% endif %}

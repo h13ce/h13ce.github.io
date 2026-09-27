@@ -12,6 +12,9 @@ figure:
   width: 1494
   height: 597
 kicker: Microstructure & effective behaviour
+selected_works:
+  - fno-homogenization
+  - stochastic-symmetry
 ---
 My multiscale work focuses on connecting resolved microstructural mechanics with efficient representations of effective material behaviour. I use FFT-based computational homogenization to resolve heterogeneous microstructures and their internal fields, and deep material networks to compress this response into trainable hierarchical constitutive representations.
 

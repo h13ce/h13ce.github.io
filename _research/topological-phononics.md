@@ -13,6 +13,9 @@ figure:
   width: 870
   height: 1287
 kicker: Nonlinearity & wave propagation
+selected_works:
+  - tunable-topological
+  - bistable-topological
 ---
 My work in topological phononics investigates how nonlinear mechanics can make wave-guiding structures reconfigurable. I showed that large deformation of soft unit cells described by hyperelastic material models can break inversion symmetry and drive transitions between distinct topological phases.
 
