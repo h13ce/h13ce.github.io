@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f9faf7">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Scientific Machine Learning &amp; Differentiable Mechanics | Binh Huy Nguyen</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Scientific Machine Learning &amp; Differentiable Mechanics" />
+<meta name="author" content="Binh Huy Nguyen" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="My scientific-machine-learning work is built around mechanics problems in which physical structure, sparse measurements, and history dependence matter. I have used physics-informed neural networks for forward and inverse modelling of piezoelectric microsystems, including identification of electromechanical parameters from experimental observations. I have also developed Fourier neural-operator models for history-dependent hysteresis in ferroelectric and ferromagnetic materials, treating the response as an operator between excitation and material-response histories." />
+<meta property="og:description" content="My scientific-machine-learning work is built around mechanics problems in which physical structure, sparse measurements, and history dependence matter. I have used physics-informed neural networks for forward and inverse modelling of piezoelectric microsystems, including identification of electromechanical parameters from experimental observations. I have also developed Fourier neural-operator models for history-dependent hysteresis in ferroelectric and ferromagnetic materials, treating the response as an operator between excitation and material-response histories." />
+<link rel="canonical" href="https://h13ce.github.io/research/scientific-ml/" />
+<meta property="og:url" content="https://h13ce.github.io/research/scientific-ml/" />
+<meta property="og:site_name" content="Binh Huy Nguyen" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-27T14:06:59+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Scientific Machine Learning &amp; Differentiable Mechanics" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Binh Huy Nguyen"},"dateModified":"2026-09-27T14:06:59+00:00","datePublished":"2026-09-27T14:06:59+00:00","description":"My scientific-machine-learning work is built around mechanics problems in which physical structure, sparse measurements, and history dependence matter. I have used physics-informed neural networks for forward and inverse modelling of piezoelectric microsystems, including identification of electromechanical parameters from experimental observations. I have also developed Fourier neural-operator models for history-dependent hysteresis in ferroelectric and ferromagnetic materials, treating the response as an operator between excitation and material-response histories.","headline":"Scientific Machine Learning &amp; Differentiable Mechanics","mainEntityOfPage":{"@type":"WebPage","@id":"https://h13ce.github.io/research/scientific-ml/"},"url":"https://h13ce.github.io/research/scientific-ml/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+<script src="/assets/js/scientific-media.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href="/" aria-label="Binh Huy Nguyen — home">Binh Huy Nguyen<span>Computational mechanics</span></a>
+    <nav aria-label="Main navigation">
+      <a href="/research/" aria-current="true">Research</a><a href="/publications/">Publications</a><a href="/software/">Software</a><a href="/cv/">CV</a>
+    </nav>
+  </div>
+</header>
+
+  <main id="main" tabindex="-1"><article class="container research-detail">
+  <header class="page-heading"><a class="back-link" href="/research/">← Research</a><p class="eyebrow">03 / Learning & differentiable simulation</p><h1>Scientific Machine Learning &amp; Differentiable Mechanics</h1><p class="lede">I use physics-informed learning and neural operators for mechanics problems shaped by sparse measurements and history dependence. Differentiable finite elements connect forward simulation, parameter sensitivities, and inverse identification.</p></header>
+  <nav class="work-jump-nav" aria-label="On this research page"><a href="#research-narrative">Overview</a><a href="#selected-work">Selected work <span>4</span></a></nav>
+  <figure class="research-figure">
+  <a class="figure-link" href="/assets/images/research/scientific-ml.webp" aria-label="View full figure: Fourier neural operator representation of ferroelectric actuator response">
+    <img src="/assets/images/research/scientific-ml.webp" alt="Fourier neural operator representation of ferroelectric actuator response" width="569" height="517" loading="lazy" decoding="async">
+  </a>
+  <figcaption>Neural-operator modelling of history-dependent ferroelectric response as part of a broader programme in scientific machine learning and differentiable mechanics. <a href="/assets/images/research/scientific-ml.webp">View full figure <span aria-hidden="true">↗</span></a></figcaption>
+</figure>
+
+  <div class="prose research-narrative" id="research-narrative"><p>My scientific-machine-learning work is built around mechanics problems in which physical structure, sparse measurements, and history dependence matter. I have used physics-informed neural networks for forward and inverse modelling of piezoelectric microsystems, including identification of electromechanical parameters from experimental observations. I have also developed Fourier neural-operator models for history-dependent hysteresis in ferroelectric and ferromagnetic materials, treating the response as an operator between excitation and material-response histories.</p>
+
+<p>The current direction is differentiable computational mechanics. Rather than using a neural surrogate as a separate approximation layer, I am developing differentiable finite-element formulations in which constitutive updates, nonlinear equilibrium, and inverse identification can be differentiated end to end. This provides a common foundation for parameter identification, sensitivity analysis, and physics-constrained learning.</p>
+</div>
+  
+
+
+<div class="selected-works selected-works--detail">
+  <div class="works-heading"><p class="eyebrow">Contributions &amp; evidence</p><h2 id="selected-work">Selected work</h2></div>
+  <ol class="selected-works-list">
+  
+    
+    
+      
+      
+      <li id="work-ferro-difffem" class="work-entry work-entry--text">
+        <article class="selected-work" aria-labelledby="work-title-ferro-difffem">
+          <div class="work-copy">
+            <p class="selected-work-meta"><span class="work-index">01</span> 2026 <span aria-hidden="true">·</span> Preprint and submitted manuscript</p>
+            <h3 id="work-title-ferro-difffem">Differentiable finite elements for history-dependent ferroelectricity: matrix-free forward analysis and adjoint inverse identification</h3>
+            <p class="work-contribution">A differentiable finite-element framework for nonlinear ferroelectric MEMS that keeps the local switching problem, global electromechanical equilibrium, and loading history inside one forward/inverse model. The formulation combines implicit differentiation, matrix-free nonlinear solution, and a fully discrete adjoint for trajectory-based parameter identification.</p>
+            <div class="selected-work-links">
+              <a href="/publications/#publication-ferro-difffem">Publication record <span aria-hidden="true">→</span></a>
+              
+              
+              <a href="https://github.com/h13ce/difffem">Code ↗</a>
+            </div>
+            <div class="work-crosslinks"><span>Also in</span><a href="/research/ferroelectric-mems/#work-ferro-difffem">Ferroelectric MEMS →</a></div>
+          </div>
+          
+          
+        </article>
+      </li>
+      
+    
+  
+    
+    
+      
+      
+      <li id="work-pinn-microbender" class="work-entry work-entry--paired">
+        <article class="selected-work" aria-labelledby="work-title-pinn-microbender">
+          <div class="work-copy">
+            <p class="selected-work-meta"><span class="work-index">02</span> 2024 <span aria-hidden="true">·</span> Journal of Micromechanics and Microengineering 34, 115004</p>
+            <h3 id="work-title-pinn-microbender">Physics-informed neural networks with data-driven in modeling and characterizing piezoelectric micro-bender</h3>
+            <p class="work-contribution">Physics-informed neural networks are combined with a reduced electromechanical micro-bender model for forward prediction and inverse characterization, using measured displacement data to identify device and material parameters.</p>
+            <div class="selected-work-links">
+              <a href="/publications/#publication-pinn-microbender">Publication record <span aria-hidden="true">→</span></a>
+              
+              
+              
+            </div>
+            
+          </div>
+          <figure class="research-figure">
+  <a class="figure-link" href="/assets/images/works/pinn-microbender.webp" aria-label="View full figure: Experimental micro-bender setup and physics-informed neural network with constitutive, equilibrium, boundary, and data losses.">
+    <img src="/assets/images/works/pinn-microbender.webp" alt="Experimental micro-bender setup and physics-informed neural network with constitutive, equilibrium, boundary, and data losses." width="1059" height="1014" loading="lazy" decoding="async">
+  </a>
+  <figcaption>Measured micro-bender response coupled to physics-informed forward and inverse modelling. <a href="/assets/images/works/pinn-microbender.webp">View full figure <span aria-hidden="true">↗</span></a></figcaption>
+</figure>
+
+          
+        </article>
+      </li>
+      
+    
+  
+    
+    
+      
+      
+      <li id="work-ferro-fno" class="work-entry work-entry--text">
+        <article class="selected-work" aria-labelledby="work-title-ferro-fno">
+          <div class="work-copy">
+            <p class="selected-work-meta"><span class="work-index">03</span> 2026 <span aria-hidden="true">·</span> Public preprint</p>
+            <h3 id="work-title-ferro-fno">Fourier neural operator-based modeling of ferroelectric device under large signal and high frequency</h3>
+            <p class="work-contribution">Experimentally measured voltage-displacement trajectories across amplitudes and frequencies are used to train a Fourier neural operator for nonlinear ferroelectric micro-actuation, extending operator learning toward large-signal excitation, high frequency, and structural resonance.</p>
+            <div class="selected-work-links">
+              <a href="/publications/#publication-ferro-fno">Publication record <span aria-hidden="true">→</span></a>
+              
+              <a href="https://doi.org/10.2139/ssrn.6514550">Preprint ↗</a>
+              
+            </div>
+            <div class="work-crosslinks"><span>Also in</span><a href="/research/ferroelectric-mems/#work-ferro-fno">Ferroelectric MEMS →</a></div>
+          </div>
+          
+          
+        </article>
+      </li>
+      
+    
+  
+    
+    
+      
+      
+      <li id="work-fno-homogenization" class="work-entry work-entry--text">
+        <article class="selected-work" aria-labelledby="work-title-fno-homogenization">
+          <div class="work-copy">
+            <p class="selected-work-meta"><span class="work-index">04</span> 2026 <span aria-hidden="true">·</span> Journal of the Mechanics and Physics of Solids 206, 106418</p>
+            <h3 id="work-title-fno-homogenization">Universal Fourier Neural Operators for periodic homogenization problems in linear elasticity</h3>
+            <p class="work-contribution">Fourier neural operators are connected directly to FFT-based computational homogenization, showing how an FNO can reproduce the basic FFT scheme and approximate periodic cell problems while retaining a clear computational- mechanics interpretation.</p>
+            <div class="selected-work-links">
+              <a href="/publications/#publication-fno-homogenization">Publication record <span aria-hidden="true">→</span></a>
+              
+              
+              
+            </div>
+            <div class="work-crosslinks"><span>Also in</span><a href="/research/multiscale-mechanics/#work-fno-homogenization">Multiscale Computational Mechanics →</a></div>
+          </div>
+          
+          
+        </article>
+      </li>
+      
+    
+  
+  </ol>
+</div>
+
+
+  <nav class="research-next" aria-label="More research"><p class="eyebrow">Explore the research</p><a href="/research/ferroelectric-mems/">Ferroelectric MEMS <span aria-hidden="true">→</span></a><a href="/research/flexoelectric-mems/">Flexoelectric MEMS &amp; Microfabrication <span aria-hidden="true">→</span></a><a href="/research/multiscale-mechanics/">Multiscale Computational Mechanics <span aria-hidden="true">→</span></a><a href="/research/topological-phononics/">Nonlinear &amp; Topological Phononics <span aria-hidden="true">→</span></a></nav>
+</article>
+</main>
+  <footer class="site-footer">
+  <div class="container footer-inner">
+    <div><a class="footer-name" href="/">Binh Huy Nguyen</a><p>CEMEF · Mines Paris–PSL</p><a href="mailto:binh-huy.nguyen@minesparis.psl.eu">binh-huy.nguyen@minesparis.psl.eu</a></div>
+    <div class="footer-links"><p class="eyebrow">Academic profiles</p><div class="profile-links"><a href="https://scholar.google.com/citations?user=zMf1WedEf5gC&hl=en">Google Scholar <span aria-hidden="true">↗</span></a>
+<a href="https://orcid.org/0000-0003-0830-3121">ORCID <span aria-hidden="true">↗</span></a>
+<a href="https://github.com/h13ce">GitHub <span aria-hidden="true">↗</span></a>
+</div><a href="/cv/">Career &amp; education →</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

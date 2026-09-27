@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f9faf7">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Ferroelectric MEMS | Binh Huy Nguyen</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Ferroelectric MEMS" />
+<meta name="author" content="Binh Huy Nguyen" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="My work on ferroelectric MEMS connects nonlinear material modelling with device-scale simulation and experiment. I have developed phenomenological continuum formulations for ferroelectric, antiferroelectric, and antiferroelectric-like materials, and reduced actuator models that can be calibrated against measured electromechanical response. Laser Doppler vibrometry has been used to characterize electrically driven microstructures and to connect constitutive behaviour with observable device dynamics." />
+<meta property="og:description" content="My work on ferroelectric MEMS connects nonlinear material modelling with device-scale simulation and experiment. I have developed phenomenological continuum formulations for ferroelectric, antiferroelectric, and antiferroelectric-like materials, and reduced actuator models that can be calibrated against measured electromechanical response. Laser Doppler vibrometry has been used to characterize electrically driven microstructures and to connect constitutive behaviour with observable device dynamics." />
+<link rel="canonical" href="https://h13ce.github.io/research/ferroelectric-mems/" />
+<meta property="og:url" content="https://h13ce.github.io/research/ferroelectric-mems/" />
+<meta property="og:site_name" content="Binh Huy Nguyen" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-27T14:06:59+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Ferroelectric MEMS" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Binh Huy Nguyen"},"dateModified":"2026-09-27T14:06:59+00:00","datePublished":"2026-09-27T14:06:59+00:00","description":"My work on ferroelectric MEMS connects nonlinear material modelling with device-scale simulation and experiment. I have developed phenomenological continuum formulations for ferroelectric, antiferroelectric, and antiferroelectric-like materials, and reduced actuator models that can be calibrated against measured electromechanical response. Laser Doppler vibrometry has been used to characterize electrically driven microstructures and to connect constitutive behaviour with observable device dynamics.","headline":"Ferroelectric MEMS","mainEntityOfPage":{"@type":"WebPage","@id":"https://h13ce.github.io/research/ferroelectric-mems/"},"url":"https://h13ce.github.io/research/ferroelectric-mems/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+<script src="/assets/js/scientific-media.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href="/" aria-label="Binh Huy Nguyen — home">Binh Huy Nguyen<span>Computational mechanics</span></a>
+    <nav aria-label="Main navigation">
+      <a href="/research/" aria-current="true">Research</a><a href="/publications/">Publications</a><a href="/software/">Software</a><a href="/cv/">CV</a>
+    </nav>
+  </div>
+</header>
+
+  <main id="main" tabindex="-1"><article class="container research-detail">
+  <header class="page-heading"><a class="back-link" href="/research/">← Research</a><p class="eyebrow">01 / Modelling & experiment</p><h1>Ferroelectric MEMS</h1><p class="lede">I connect nonlinear material modelling with device-scale simulation and experimental characterization of ferroelectric thin-film MEMS. Inverse identification links measured electromechanical response to material parameters.</p></header>
+  <nav class="work-jump-nav" aria-label="On this research page"><a href="#research-narrative">Overview</a><a href="#selected-work">Selected work <span>4</span></a></nav>
+  <figure class="research-figure">
+  <a class="figure-link" href="/assets/images/research/ferroelectric-mems.webp" aria-label="View full figure: Ferroelectric microbender and laser Doppler vibrometry experimental setup">
+    <img src="/assets/images/research/ferroelectric-mems.webp" alt="Ferroelectric microbender and laser Doppler vibrometry experimental setup" width="976" height="380" loading="lazy" decoding="async">
+  </a>
+  <figcaption>Ferroelectric microbender and experimental characterization used to connect material modelling with device-scale response. <a href="/assets/images/research/ferroelectric-mems.webp">View full figure <span aria-hidden="true">↗</span></a></figcaption>
+</figure>
+
+  <div class="prose research-narrative" id="research-narrative"><p>My work on ferroelectric MEMS connects nonlinear material modelling with device-scale simulation and experiment. I have developed phenomenological continuum formulations for ferroelectric, antiferroelectric, and antiferroelectric-like materials, and reduced actuator models that can be calibrated against measured electromechanical response. Laser Doppler vibrometry has been used to characterize electrically driven microstructures and to connect constitutive behaviour with observable device dynamics.</p>
+
+<p>This direction also includes inverse identification from experimental data. I have combined physics-based models with physics-informed neural networks to identify electromechanical parameters from limited observations, and with Fourier neural operators to represent history-dependent ferroelectric hysteresis. Current work extends this progression toward differentiable finite-element simulation, where forward analysis and parameter sensitivities are treated within the same computational framework.</p>
+</div>
+  
+
+
+<div class="selected-works selected-works--detail">
+  <div class="works-heading"><p class="eyebrow">Contributions &amp; evidence</p><h2 id="selected-work">Selected work</h2></div>
+  <ol class="selected-works-list">
+  
+    
+    
+      
+      
+      <li id="work-ferro-difffem" class="work-entry work-entry--text">
+        <article class="selected-work" aria-labelledby="work-title-ferro-difffem">
+          <div class="work-copy">
+            <p class="selected-work-meta"><span class="work-index">01</span> 2026 <span aria-hidden="true">·</span> Preprint and submitted manuscript</p>
+            <h3 id="work-title-ferro-difffem">Differentiable finite elements for history-dependent ferroelectricity: matrix-free forward analysis and adjoint inverse identification</h3>
+            <p class="work-contribution">A differentiable finite-element framework for nonlinear ferroelectric MEMS that keeps the local switching problem, global electromechanical equilibrium, and loading history inside one forward/inverse model. The formulation combines implicit differentiation, matrix-free nonlinear solution, and a fully discrete adjoint for trajectory-based parameter identification.</p>
+            <div class="selected-work-links">
+              <a href="/publications/#publication-ferro-difffem">Publication record <span aria-hidden="true">→</span></a>
+              
+              
+              <a href="https://github.com/h13ce/difffem">Code ↗</a>
+            </div>
+            <div class="work-crosslinks"><span>Also in</span><a href="/research/scientific-ml/#work-ferro-difffem">Scientific Machine Learning &amp; Differentiable Mechanics →</a></div>
+          </div>
+          
+          
+        </article>
+      </li>
+      
+    
+  
+    
+    
+      
+      
+      <li id="work-ferro-microactuator" class="work-entry work-entry--wide">
+        <article class="selected-work" aria-labelledby="work-title-ferro-microactuator">
+          <div class="work-copy">
+            <p class="selected-work-meta"><span class="work-index">02</span> 2023 <span aria-hidden="true">·</span> Micromachines 14, 1355</p>
+            <h3 id="work-title-ferro-microactuator">Simplified phenomenological model for ferroelectric micro-actuator</h3>
+            <p class="work-contribution">A thermodynamically based phenomenological model connects ferroelectric switching to coupled finite-element actuator simulation and device-scale characterization. The associated micro-cantilever work links the material description to LDV measurements and ferroelectric thin-film characterization.</p>
+            <div class="selected-work-links">
+              <a href="/publications/#publication-ferro-microactuator">Publication record <span aria-hidden="true">→</span></a>
+              
+              
+              
+            </div>
+            
+          </div>
+          <figure class="research-figure">
+  <a class="figure-link" href="/assets/images/works/ferro-microactuator.webp" aria-label="View full figure: Laser Doppler vibrometry measurement of a ferroelectric micro-cantilever, with displacement scale in micrometres.">
+    <img src="/assets/images/works/ferro-microactuator.webp" alt="Laser Doppler vibrometry measurement of a ferroelectric micro-cantilever, with displacement scale in micrometres." width="1375" height="710" loading="lazy" decoding="async">
+  </a>
+  <figcaption>Micro-cantilever LDV measurement and displacement scale. <a href="/assets/images/works/ferro-microactuator.webp">View full figure <span aria-hidden="true">↗</span></a></figcaption>
+</figure>
+
+          <div class="scientific-media-group">
+<figure class="scientific-media">
+  <p class="eyebrow">computational animation</p>
+  <video controls playsinline preload="none" poster="/assets/media/derived/ferro-minor-loop.webp" width="1920" height="976" aria-labelledby="media-ferro-microactuator-1" data-scientific-media>
+    <source src="/assets/media/derived/ferro-minor-loop.mp4" type="video/mp4">
+    <a href="/assets/media/derived/ferro-minor-loop.mp4">Open Minor-loop ferroelectric actuator simulation</a>
+  </video>
+  <figcaption id="media-ferro-microactuator-1">Minor-loop ferroelectric actuator simulation. <span class="media-instruction">Play to inspect the time evolution.</span> <a href="/assets/media/derived/ferro-minor-loop.mp4">Open video ↗</a> <a href="/assets/media/FerroActuator/Minor_bipolar_butterfly.gif">Original GIF ↗</a></figcaption>
+</figure>
+
+<figure class="scientific-media">
+  <p class="eyebrow">experimental measurement</p>
+  <video controls playsinline preload="none" poster="/assets/media/derived/polytec-measurement.webp" width="1524" height="910" aria-labelledby="media-ferro-microactuator-2" data-scientific-media>
+    <source src="/assets/media/FerroActuator/PolytecMeasurement.mp4" type="video/mp4">
+    <a href="/assets/media/FerroActuator/PolytecMeasurement.mp4">Open Polytec LDV measurement</a>
+  </video>
+  <figcaption id="media-ferro-microactuator-2">Polytec LDV measurement. <span class="media-instruction">Play to inspect the time evolution.</span> <a href="/assets/media/FerroActuator/PolytecMeasurement.mp4">Open video ↗</a></figcaption>
+</figure>
+</div>
+        </article>
+      </li>
+      
+    
+  
+    
+    
+      
+      
+      <li id="work-afe-actuator" class="work-entry work-entry--wide">
+        <article class="selected-work" aria-labelledby="work-title-afe-actuator">
+          <div class="work-copy">
+            <p class="selected-work-meta"><span class="work-index">03</span> 2024 <span aria-hidden="true">·</span> International Journal of Numerical Modelling 37, e3273</p>
+            <h3 id="work-title-afe-actuator">Computational modeling of uniaxial antiferroelectric and antiferroelectric-like actuators</h3>
+            <p class="work-contribution">The ferroelectric modelling line is extended to antiferroelectric and antiferroelectric-like switching, translating pinched and double P-E hysteresis into a practical constitutive update and coupled actuator model.</p>
+            <div class="selected-work-links">
+              <a href="/publications/#publication-afe-actuator">Publication record <span aria-hidden="true">→</span></a>
+              
+              
+              
+            </div>
+            
+          </div>
+          <figure class="research-figure">
+  <a class="figure-link" href="/assets/images/works/afe-actuator.webp" aria-label="View full figure: Experimental and simulated strain and electric-displacement hysteresis, polarization response, and actuator displacement curves.">
+    <img src="/assets/images/works/afe-actuator.webp" alt="Experimental and simulated strain and electric-displacement hysteresis, polarization response, and actuator displacement curves." width="1382" height="1055" loading="lazy" decoding="async">
+  </a>
+  <figcaption>Constitutive response and actuator displacement for antiferroelectric and antiferroelectric-like materials. <a href="/assets/images/works/afe-actuator.webp">View full figure <span aria-hidden="true">↗</span></a></figcaption>
+</figure>
+
+          
+        </article>
+      </li>
+      
+    
+  
+    
+    
+      
+      
+      <li id="work-ferro-fno" class="work-entry work-entry--text">
+        <article class="selected-work" aria-labelledby="work-title-ferro-fno">
+          <div class="work-copy">
+            <p class="selected-work-meta"><span class="work-index">04</span> 2026 <span aria-hidden="true">·</span> Public preprint</p>
+            <h3 id="work-title-ferro-fno">Fourier neural operator-based modeling of ferroelectric device under large signal and high frequency</h3>
+            <p class="work-contribution">Experimentally measured voltage-displacement trajectories across amplitudes and frequencies are used to train a Fourier neural operator for nonlinear ferroelectric micro-actuation, extending operator learning toward large-signal excitation, high frequency, and structural resonance.</p>
+            <div class="selected-work-links">
+              <a href="/publications/#publication-ferro-fno">Publication record <span aria-hidden="true">→</span></a>
+              
+              <a href="https://doi.org/10.2139/ssrn.6514550">Preprint ↗</a>
+              
+            </div>
+            <div class="work-crosslinks"><span>Also in</span><a href="/research/scientific-ml/#work-ferro-fno">Scientific Machine Learning &amp; Differentiable Mechanics →</a></div>
+          </div>
+          
+          
+        </article>
+      </li>
+      
+    
+  
+  </ol>
+</div>
+
+
+  <nav class="research-next" aria-label="More research"><p class="eyebrow">Explore the research</p><a href="/research/flexoelectric-mems/">Flexoelectric MEMS &amp; Microfabrication <span aria-hidden="true">→</span></a><a href="/research/scientific-ml/">Scientific Machine Learning &amp; Differentiable Mechanics <span aria-hidden="true">→</span></a><a href="/research/multiscale-mechanics/">Multiscale Computational Mechanics <span aria-hidden="true">→</span></a><a href="/research/topological-phononics/">Nonlinear &amp; Topological Phononics <span aria-hidden="true">→</span></a></nav>
+</article>
+</main>
+  <footer class="site-footer">
+  <div class="container footer-inner">
+    <div><a class="footer-name" href="/">Binh Huy Nguyen</a><p>CEMEF · Mines Paris–PSL</p><a href="mailto:binh-huy.nguyen@minesparis.psl.eu">binh-huy.nguyen@minesparis.psl.eu</a></div>
+    <div class="footer-links"><p class="eyebrow">Academic profiles</p><div class="profile-links"><a href="https://scholar.google.com/citations?user=zMf1WedEf5gC&hl=en">Google Scholar <span aria-hidden="true">↗</span></a>
+<a href="https://orcid.org/0000-0003-0830-3121">ORCID <span aria-hidden="true">↗</span></a>
+<a href="https://github.com/h13ce">GitHub <span aria-hidden="true">↗</span></a>
+</div><a href="/cv/">Career &amp; education →</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

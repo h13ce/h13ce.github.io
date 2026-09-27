@@ -1,8 +1,0 @@
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="Binh Huy Nguyen — home">Binh Huy Nguyen<span>Computational mechanics</span></a>
-    <nav aria-label="Main navigation">
-      {% for item in site.navigation %}<a href="{{ item.url | relative_url }}"{% if page.url contains item.url %} aria-current="{% if page.url == item.url %}page{% else %}true{% endif %}"{% endif %}>{{ item.title }}</a>{% endfor %}
-    </nav>
-  </div>
-</header>
