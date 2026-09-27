@@ -5,13 +5,11 @@ summary: Nonlinear mechanics makes wave-guiding structures reconfigurable. Soft 
   bistable unit cells connect local deformation and structural switching with distinct
   topological states.
 figure:
-  alt: Bistable beam loading–displacement curve with stable configurations and frequency-response
-    plot
-  caption: Bistable beam configurations, equilibrium path, and frequency response
-    in a reconfigurable mechanical system.
-  path: /assets/images/research/topological-phononics.svg
-  width: 870
-  height: 1287
+  alt: Out-of-plane displacement field propagating along an interface in a soft phononic crystal
+  caption: Topologically guided wave propagation in a pre-stressed soft phononic crystal.
+  path: /assets/images/works/tunable-topological.webp
+  width: 1400
+  height: 797
 kicker: Nonlinearity & wave propagation
 selected_works:
   - tunable-topological
