@@ -1,30 +1,28 @@
-name: Prepare scientific media
+name: Validate research portfolio
 on:
   push:
     branches: [visual-pass-2-media]
 permissions:
   contents: read
 jobs:
-  media:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
-      - name: Install FFmpeg
-        run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg
-      - name: Convert scientific source media
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+      - name: Build with GitHub Pages dependencies
+        run: JEKYLL_ENV=production bundle exec jekyll build --strict_front_matter
+      - name: Check references and scientific media
         run: |
-          mkdir -p derived
-          ffmpeg -y -i assets/media/TI/Structure_Hex_Annular_30x30_3models_2.avi -an -c:v libx264 -crf 20 -preset medium -pix_fmt yuv420p -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -movflags +faststart derived/topological-wave.mp4
-          ffmpeg -y -i assets/media/TI/Structure_Hex_Annular_30x30_3models_2.avi -frames:v 1 derived/topological-wave.png
-          ffmpeg -y -i assets/media/FerroActuator/Minor_bipolar_butterfly.gif -an -c:v libx264 -crf 18 -preset medium -pix_fmt yuv420p -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -movflags +faststart derived/ferro-minor-loop.mp4
-          ffmpeg -y -i assets/media/FerroActuator/Minor_bipolar_butterfly.gif -frames:v 1 derived/ferro-minor-loop.png
-          ffmpeg -y -i assets/media/FerroActuator/PolytecMeasurement.mp4 -frames:v 1 derived/polytec-measurement.png
-          cp assets/media/FerroActuator/PolytecMeasurement.mp4 derived/
-          ffprobe -v error -show_streams -show_format -of json derived/topological-wave.mp4 > derived/topological-wave.json
+          python -m pip install PyYAML
+          python scripts/check_site.py
       - uses: actions/upload-artifact@v4
         with:
-          name: scientific-media
-          path: derived/
+          name: portfolio-preview
+          path: _site/
           retention-days: 2

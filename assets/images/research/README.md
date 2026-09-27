@@ -39,3 +39,17 @@ SVGs are self-contained (embedded image data, no external references). The
 phononics source includes raster panels, whose original resolution is preserved.
 No scientific panel was removed or recoloured. Layout uses object containment,
 not image cropping. Alt text and captions live alongside research narratives.
+
+## Additional work figures — second visual pass
+
+Derivatives in `../works/` preserve complete scientific panels, labels, and scales.
+PNG sources were converted to WebP at quality 92 without upscaling. The PDF
+was rendered with Poppler at a 1400 px maximum dimension, then encoded as WebP.
+
+| Work | Source in h13ce/ERCStg |
+| --- | --- |
+| ferro-microactuator | Figures/Microcantilever-LDV-measurement.png |
+| afe-actuator | Figures/AFE-AFE-like.png |
+| electro-gradient-semiconductor | Figures/Flexo_semiconductor.png |
+| pinn-microbender | Figures/PINNs_Piezo.png |
+| tunable-topological | Figures/Hex_Annular_30x30_WP_defect_t97.pdf |

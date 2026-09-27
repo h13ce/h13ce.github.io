@@ -1,0 +1,9 @@
+{% assign media = include.media %}
+<figure class="scientific-media">
+  <p class="eyebrow">{{ media.role | escape }}</p>
+  <video controls playsinline preload="none" poster="{{ media.poster | relative_url }}" width="{{ media.width }}" height="{{ media.height }}" aria-labelledby="media-{{ include.work_id }}-{{ include.media_index }}" data-scientific-media>
+    <source src="{{ media.path | relative_url }}" type="{{ media.mime }}">
+    <a href="{{ media.path | relative_url }}">Open {{ media.label | escape }}</a>
+  </video>
+  <figcaption id="media-{{ include.work_id }}-{{ include.media_index }}">{{ media.label | escape }}. <span class="media-instruction">Play to inspect the time evolution.</span> <a href="{{ media.path | relative_url }}">Open video ↗</a>{% if media.source_path contains '.gif' %} <a href="{{ media.source_path | relative_url }}">Original GIF ↗</a>{% endif %}</figcaption>
+</figure>
