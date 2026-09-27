@@ -9,7 +9,7 @@ The first visual version uses all five author-controlled primary selections belo
 | Ferroelectric MEMS | `h13ce/ERCStg/Figures/Microbender_sample_exp_setup.png` | Experimental anchor: device + LDV characterization |
 | Flexoelectric MEMS & Microfabrication | `h13ce/ERCStg/CV/cv_flexo_exp.svg` | Fabrication/experiment showcase |
 | Scientific Machine Learning & Differentiable Mechanics | `h13ce/ERCStg/CV/cv_fno_ferro.png` | Neural-operator demonstrator; later pair with DiffFEM |
-| Multiscale Computational Mechanics | `h13ce/ERCStg/Figures/FNO_FFT_fiber.png` | Preferred replacement: FNO/FFT comparison across heterogeneous microstructures; current web export retained until this private binary is copied into the public repo |
+| Multiscale Computational Mechanics | `h13ce/ERCStg/Figures/FNO_FFT_fiber.jpg` | FFT/FNO comparison across heterogeneous microstructures; copied as `multiscale-fno-fft.jpg` |
 | Nonlinear & Topological Phononics | `h13ce/ERCStg/Figures/Hex_Annular_30x30_WP_defect_t97.pdf` | Topologically guided wave field; exported as `../works/tunable-topological.webp` |
 
 ## Secondary candidates
