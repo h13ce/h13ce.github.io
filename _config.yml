@@ -95,4 +95,6 @@ exclude:
 - assets/images/research/README.md
 - scripts
 - tests
+- assets/media/TI/Structure_Hex_Annular_30x30_3models_2.avi
+- assets/media/README.md
 lang: en

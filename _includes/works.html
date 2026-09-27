@@ -2,38 +2,34 @@
 {% assign work_mode = include.mode | default: 'detail' %}
 {% if include.ids and include.ids.size > 0 %}
 <div class="selected-works selected-works--{{ work_mode }}">
-  {% if work_mode == 'detail' %}<h2>Selected work</h2>{% else %}<p class="selected-works-label">Selected work</p>{% endif %}
+  {% if work_mode == 'detail' %}<div class="works-heading"><p class="eyebrow">Contributions &amp; evidence</p><h2 id="selected-work">Selected work</h2></div>{% else %}<p class="selected-works-label">Selected work</p>{% endif %}
   <ol class="selected-works-list">
   {% for work_id in include.ids limit: work_count %}
     {% assign work = site.data.works[work_id] %}
     {% if work %}
-      {% assign matching_papers = site.data.publications | where: 'id', work.publication_id %}
-      {% assign paper = matching_papers | first %}
-      <li id="{% if work_mode == 'detail' %}work-{{ work_id }}{% else %}theme-work-{{ work_id }}{% endif %}">
-        <article class="selected-work">
-          <p class="selected-work-meta">{{ work.year }} · {{ work.status | escape }}</p>
-          {% if work_mode == 'compact' and include.research_url %}
-            <h4><a href="{{ include.research_url | relative_url }}#work-{{ work_id }}">{{ work.title | escape }}</a></h4>
-          {% else %}
-            <h3>{{ work.title | escape }}</h3>
-          {% endif %}
-          {% if work_mode == 'detail' %}
-            <p>{{ work.summary }}</p>
+      {% if work_mode == 'compact' %}
+      <li><a href="{{ include.research_url | relative_url }}#work-{{ work_id }}"><span>{{ work.title | escape }}</span><span class="compact-work-year">{{ work.year }} <span aria-hidden="true">↗</span></span></a></li>
+      {% else %}
+      {% assign paper = site.data.publications | where: 'id', work.publication_id | first %}
+      <li id="work-{{ work_id }}" class="work-entry work-entry--{{ work.presentation | default: 'text' }}">
+        <article class="selected-work" aria-labelledby="work-title-{{ work_id }}">
+          <div class="work-copy">
+            <p class="selected-work-meta"><span class="work-index">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span> {{ work.year }} <span aria-hidden="true">·</span> {{ work.status | escape }}</p>
+            <h3 id="work-title-{{ work_id }}">{{ work.title | escape }}</h3>
+            <p class="work-contribution">{{ work.summary }}</p>
             <div class="selected-work-links">
+              {% if paper %}<a href="{{ '/publications/' | relative_url }}#publication-{{ paper.id }}">Publication record <span aria-hidden="true">→</span></a>{% endif %}
               {% if paper.doi %}<a href="{{ paper.doi | escape }}">DOI ↗</a>{% endif %}
               {% if paper.preprint %}<a href="{{ paper.preprint | escape }}">Preprint ↗</a>{% endif %}
               {% if paper.code %}<a href="{{ paper.code | escape }}">Code ↗</a>{% endif %}
-              {% if work.media %}
-                {% for media in work.media %}
-                  {% if media.web_ready %}
-                    <a href="{{ media.path | relative_url }}">{{ media.label | escape }} ↗</a>
-                  {% endif %}
-                {% endfor %}
-              {% endif %}
             </div>
-          {% endif %}
+            {% if work.themes.size > 1 %}<div class="work-crosslinks"><span>Also in</span>{% for theme_id in work.themes %}{% unless theme_id == page.slug %}{% assign related_theme = site.research | where: 'slug', theme_id | first %}{% if related_theme %}<a href="{{ related_theme.url | relative_url }}#work-{{ work_id }}">{{ related_theme.title | escape }} →</a>{% endif %}{% endunless %}{% endfor %}</div>{% endif %}
+          </div>
+          {% if work.figure %}{% include figure.html item=work %}{% endif %}
+          {% if work.media %}<div class="scientific-media-group">{% for media in work.media %}{% if media.web_ready and media.kind == 'video' %}{% include scientific-media.html media=media work_id=work_id media_index=forloop.index %}{% endif %}{% endfor %}</div>{% endif %}
         </article>
       </li>
+      {% endif %}
     {% endif %}
   {% endfor %}
   </ol>

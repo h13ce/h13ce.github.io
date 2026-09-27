@@ -2,7 +2,9 @@
 
 A research-led academic portfolio built with Jekyll and hosted on GitHub Pages.
 Custom Liquid layouts and plain CSS replace the original Minima presentation.
-No JavaScript, client-side framework, external fonts, or custom Jekyll plugins are required.
+No client-side framework, external fonts, or custom Jekyll plugins are required.
+A small optional script on research pages pauses other videos during playback and
+responds to reduced-motion preference changes; native controls work without it.
 
 ## Structure
 
@@ -81,3 +83,37 @@ Figures retain their scientific panels and legends. The detail pages and every t
 caption link to full-size assets. Navigation remains visible at every viewport without
 JavaScript. The responsive layout stacks in reading order below 700px; figure dimensions
 reserve layout space and lazy loading limits initial transfer.
+
+## Second visual pass
+
+The shared works component keeps compact homepage links separate from detailed
+portfolio entries. `presentation` selects text, paired text/figure, or wide evidence
+compositions. Optional `figure` metadata uses the same accessible image component
+as the stream figures. Scientific records and cross-theme membership remain unchanged.
+Every work links to its bibliography anchor; cross-listed work links point to the
+same work ID on the other research page. Compact lists intentionally have no IDs,
+so cross-listed works do not create duplicate document anchors on the homepage.
+
+Publications are grouped into journal records and preprints/submitted manuscripts,
+then ordered newest first. Grouping uses the supplied venue/status text; no status,
+DOI, author, or other bibliographic metadata has been inferred or added. The six
+existing selected records remain on the homepage in a restrained two-column list.
+
+Scientific videos use native controls, `playsinline`, static posters, and
+`preload="none"`. Nothing autoplays or loops automatically. The original GIF is
+available by explicit link; its smaller H.264 derivative is used for controlled
+playback. The AVI remains source-only and is excluded from the generated site.
+Reduced-motion visitors see static posters until choosing playback. The optional
+script also pauses video when a tab is hidden or reduced motion is enabled.
+
+After building, run `python scripts/check_site.py` (requires PyYAML). It verifies
+work/publication IDs, cross-listing, page anchors, links, image descriptions,
+media attributes, complete bibliography rendering, and absence of homepage video
+payload. Media conversion provenance is in `assets/media/README.md`.
+
+Five additional source figures are included in this pass. The larger source
+files `difffem_mirror.pdf`, `Butterflies_Exp_FNO.png`, `Flexo_works.png`,
+`FNO_FFT_fiber.png`, and `Isotropic_RVEs.png` remain recorded as provenance in
+`works.yml`; their binary contents were unavailable through the connector during
+this pass. Their works remain fully represented by their supplied text and links.
+No approximate or invented substitute figure is used.
