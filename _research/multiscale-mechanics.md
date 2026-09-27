@@ -5,12 +5,11 @@ summary: FFT-based homogenization resolves heterogeneous microstructures and the
   internal fields. Deep material and kinematic networks provide reduced representations
   for history-dependent, differentiable multiscale modelling.
 figure:
-  alt: Resolved stress field in a heterogeneous microstructure
-  caption: Resolved heterogeneous stress field illustrating the link between microstructural
-    mechanics and reduced multiscale representations.
-  path: /assets/images/research/multiscale-mechanics.webp
-  width: 1494
-  height: 597
+  alt: Comparison of FFT-based homogenization and Fourier neural operator predictions for a fiber-reinforced microstructure
+  caption: FFT-based computational homogenization and Fourier neural operator predictions for heterogeneous microstructures.
+  path: /assets/images/research/multiscale-fno-fft.jpg
+  width: 1962
+  height: 907
 kicker: Microstructure & effective behaviour
 selected_works:
   - fno-homogenization
